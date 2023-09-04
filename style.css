@@ -6,7 +6,7 @@ body{
     margin: 0;
 }
 @font-face {
-    font-family: "airbnbbbold";
+    font-family: "airbnbbold";
     src: url(assets/Airbnb_Cereal-Bold-bdfb98485e7836ba31b456f65cded088.woff2);
     font-weight: 600;
 }
@@ -34,13 +34,14 @@ body{
     border-radius: 100px;
     border: 0.5px solid rgba(0,0,0,0.08);
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    justify-content: space-between;
 }
 .headerdiv{
     padding: 14px 24px 0 24px;
     background: white;
     height: 70px;
     width: 100%;
-    
+
 }
 .search-icon{
    display: block;
@@ -122,11 +123,10 @@ body{
     padding: 0 5px;
     width: 12.98px;
     height: 16px;
-    font: 12px;
+    font-size: 12px;
     font-family: "aribnbsmall";
     color: #717171;
     align-items: justify;
-    font-family: "airbnbsmall";
 
 }
 .add-guets-main{
@@ -167,7 +167,7 @@ body{
  border-radius: 100px;
  border: 0.5px solid rgba(0,0,0,0.08);
  position: relative;
-    
+
 
 }
 .knowt-icon{
@@ -178,3 +178,124 @@ body{
 
 }
 
+/* tablet */
+.tab-header-div{
+    width:100%;
+    height: 80px;
+    padding: 0px 40px;
+    background:white;
+    box-sizing: border-box;
+    border-bottom: 0.5px solid rgba(0,0,0,0.08);
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+.airbnb-icon-div{
+    align-items: center;
+    display: flex;
+}
+.tab-searchbar-main{
+    padding: 0px 24px;
+    flex: 0 1 auto;
+    min-width: 348px;
+}
+.tab-searchbar{
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.00),
+                0 4px 12px rgba(0,0,0,0.05);
+    position: relative;
+    align-items: center;
+    color: black;
+    display: inline-flex;
+    max-width: 100%;
+}
+.tab-anywhere-main{
+    background: transparent;
+    padding-left: 8px;
+    border: 1px solid transparent;
+    margin: 1px;
+    overflow: hidden;
+}
+.tab-anywhere{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1 1 auto;
+    font-family: "airbnbmedium";
+}
+.line{
+    background-color: #dddddd;
+    flex: 0 0 1px;
+    height: 24px;
+    width: 1px;
+}
+.tab-anyweek-main{
+    background: transparent;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: -1px;
+}
+.tab-anyweek{
+    padding: 0px 16px;
+    font-size: 14px;
+    font-family: "airbnbmedium";
+    font-weight: 600px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1 1 auto;
+    display: in;
+}
+.tab-addguests-main{
+    background: transparent;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: -1px;
+}
+.tab-addguests{
+    padding: 0 16px;
+    color: #717171;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1 1 auto;
+    font-family: "airbnbmedium";
+}
+.tab-searchicon-div{
+    background-color: #FF385c;
+    margin: 7px 7px 7px 0;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    height: 32px;
+    width: 32px;
+}
+.tab-search-icon{
+    display: block;
+    fill: none;
+    height: 12px;
+    width: 12px;
+    stroke: currentColor;
+    overflow: visible;
+}
+
+@media screen and (min-width:744px){
+    .headerdiv{
+        display: none;
+    }
+}
+@media screen and (max-width:744px){
+    .tab-header-div{
+        display: none;
+    }
+}
