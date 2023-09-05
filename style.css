@@ -75,6 +75,7 @@ body{
     width: 211px;
     height: 20px;
     font-weight: 600;
+    line-height: 20px;
     line-height: 20px;   
 }
 .anywhere-div{
@@ -93,7 +94,7 @@ body{
     font-size: 14px;
     font-family: "airbnbmedium";
     font-weight: 600px;
-    line-height: 20px;
+    line-height: 25px;
 }
 .anyweek-div{
     display: flex;
@@ -106,6 +107,8 @@ body{
 .anyweek-main{
     display: flex;
     min-width: 50px;
+    width: 211px;
+    height: 16px;
 }
 .anyweek{
     overflow: hidden;
@@ -127,6 +130,7 @@ body{
     font-family: "aribnbsmall";
     color: #717171;
     align-items: justify;
+    line-height: 16px;
 
 }
 .add-guets-main{
@@ -150,7 +154,6 @@ body{
     width: 56px;
     height: 54px;
     display: flex;
-    position: relative;
     border-radius: 0px;
     background: transparent;
     align-items: center;
@@ -166,9 +169,6 @@ body{
  justify-content: center;
  border-radius: 100px;
  border: 0.5px solid rgba(0,0,0,0.08);
- position: relative;
-
-
 }
 .knowt-icon{
     width: 16px;
@@ -188,7 +188,7 @@ body{
     border-bottom: 0.5px solid rgba(0,0,0,0.08);
     align-items: center;
     display: flex;
-    position: relative;
+    justify-content: space-between;
 }
 .airbnb-icon-div{
     align-items: center;
@@ -203,20 +203,24 @@ body{
     background-color: white;
     border: 1px solid transparent;
     border-radius: 40px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.00),
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08),
                 0 4px 12px rgba(0,0,0,0.05);
     position: relative;
     align-items: center;
     color: black;
     display: inline-flex;
-    max-width: 100%;
+    max-width:100%;
+    width: 341px;
+    height: 48px;
 }
 .tab-anywhere-main{
     background: transparent;
-    padding-left: 8px;
+    padding-left: 25px;
     border: 1px solid transparent;
-    margin: 1px;
+    margin: -1px;
     overflow: hidden;
+    width: 130px;
+    height: 26px;
 }
 .tab-anywhere{
     font-size: 14px;
@@ -227,6 +231,8 @@ body{
     overflow: hidden;
     flex: 1 1 auto;
     font-family: "airbnbmedium";
+    width: 58px;
+    height: 22px;
 }
 .line{
     background-color: #dddddd;
@@ -240,6 +246,8 @@ body{
     border: 1px solid transparent;
     border-radius: 4px;
     margin: -1px;
+    width: 95.72px;
+    height: 24px;
 }
 .tab-anyweek{
     padding: 0px 16px;
@@ -250,7 +258,8 @@ body{
     white-space: nowrap;
     overflow: hidden;
     flex: 1 1 auto;
-    display: in;
+    width: 93.72px;
+    height: 22px;
 }
 .tab-addguests-main{
     background: transparent;
@@ -258,6 +267,8 @@ body{
     border: 1px solid transparent;
     border-radius: 4px;
     margin: -1px;
+    width: 142.34px;
+    height: 22px;
 }
 .tab-addguests{
     padding: 0 16px;
@@ -270,15 +281,17 @@ body{
     overflow: hidden;
     flex: 1 1 auto;
     font-family: "airbnbmedium";
+    width: 101.34px;
+    height: 22px;
 }
 .tab-searchicon-div{
     background-color: #FF385c;
     margin: 7px 7px 7px 0;
-    border-radius: 50%;
     padding: 10px;
     color: white;
     height: 32px;
     width: 32px;
+    border-radius: 40px;
 }
 .tab-search-icon{
     display: block;
@@ -287,8 +300,67 @@ body{
     width: 12px;
     stroke: currentColor;
     overflow: visible;
+    position: relative;
 }
+.accountinfo{
+   width: 267.344px;
+   height: 80px; 
+   display: flex;
+   padding: 2px 0px 0px 0px;
 
+}
+.yourhome-main{
+    width: 148.34px;
+    height: 42px;
+    padding: 0px 0px 0px 0px;
+}
+.yourhome{
+    width: 118.34px;
+    height: 18px;
+    color: #222222;
+    font-family: "airbnbmedium";
+    font-size: 14px;
+    padding-top: 33px;
+    justify-content: space-between;
+}
+.glob-main{
+    width: 46px;
+    height: 42px;
+    padding-top: 33px;
+}
+.glob-icon{
+    width: 16px;
+    height: 16px;
+}
+.dashboard-person-main{
+ width: 77px;
+ height: 42px;
+ background: #ffffff;
+ background: transparent;
+ border: 1px solid #dddddd;
+ border-radius: 21px;
+ margin-top: 17px;
+ align-items: center;
+ display: flex;
+   
+}
+.dashboard-main{
+  padding: 6px 0px 0px  12px;
+}
+.dashboard{
+    width: 16px;
+    height: 16px;
+}
+.persional-info-main{
+    padding: 5px 3px 0px 12px;
+}
+.persional-info{
+    width: 30px;
+    height: 30px;
+}
+.airbnb-texticon-div{
+    padding: 0px;
+}
 @media screen and (min-width:744px){
     .headerdiv{
         display: none;
@@ -298,4 +370,16 @@ body{
     .tab-header-div{
         display: none;
     }
+}
+@media screen and (min-width:1126px){
+    .airbnb-icon-div{
+        display: none;
+    }
+    
+}
+@media screen and (max-width:1126px){
+    .airbnb-texticon-div{
+        display: none;
+    }
+    
 }
