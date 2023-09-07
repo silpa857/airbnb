@@ -132,10 +132,11 @@ body{
     line-height: 16px;
 
 }
-.add-guets-main{
+.add-guest-main{
     display: flex;
     min-width: 50px;
     color: #717171;
+    padding: 0px 0px 0px 0px;
 }
 .add-guest{
     overflow: hidden;
@@ -372,22 +373,29 @@ body{
 }
 .navigation-main-div{
     width: 100%;
-    height: 74px;
-    padding: 0px 80px;
+    padding: 24px 0px 0px 36px; 
     box-sizing: border-box;
     border-bottom: 0.5px solid rgba(0,0,0,0.08);
     box-shadow: 0 0.3px 0 solid rgba(0,0,0,0.1);
     overflow: hidden;
-    justify-content:space-between;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 .all-navbar{
     width: 100%;
     height: 64px;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 19px;
+    row-gap: 32px;
     justify-content: space-between;
+    padding: 0px 0px 0px 0px;
+    overflow: scroll;
 
 }
-.nav-rooms-icon-main{
+/* .nav-rooms-icon-main{
     width: 38.8px;
     height: 44px;
     margin: 12px 0px 10px;
@@ -395,24 +403,31 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
     justify-content: space-between;
     margin: 12px 0px 10px;
-}
+} */
 .nav-icon-main{
     width: 64px;
     height: 44px;
     /* margin: 12px 0px 10px; */
-    padding: 4px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin: 12px 0px 10px;
+    padding: 0px 0px 0px 0px;
 }
 .nav-icon{
     width: 24px;
     height: 24px;
-    color: #717171;
+    fill: #717171;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+    /* padding: 0px 0px 0px 0px; */
+}
+.nav-icon:hover{
+    opacity: 1;
 }
 .nav-text{
     height: 16px;
@@ -420,25 +435,51 @@ body{
     font-size: 12px;
     font-family: "airbnbmedium";
     line-height: 25px;
+    white-space: nowrap;
 }
-
+.filter-main{
+    width: 150px;
+    height: 78px;
+    align-items: right;
+}
+.nav-scroll-div{
+    width: 28px;
+    height: 28px;
+    background-color: #ffffff;
+    border: 0.5px solid rgba(0,0,0,0.3);
+    justify-content: center;
+}
+.scroll-icon{
+    width: 12px;
+    height: 12px;
+}
+.navigation-scroll-header{
+    overflow-x: hidden;
+}
 @media screen and (min-width:744px){
     .headerdiv{
         display: none;
     }
-    .all-navigation-main{
-        width: 100%;
+    .navigation-main-div{
         height: 98px;
+        
     }
+    .all-navbar{
+        width: 50%;
+    }
+    
 }
 @media screen and (max-width:744px){
     .tab-header-div{
         display: none;
     }
     .navigation-main-div{
-        padding: 0px 24px;
+        padding: 0px 24px 0px 24px;
+        height: 74px;
     }
-    
+    .filter-main{
+        display: none;
+    }
 }
 @media screen and (min-width:1024px){
     /* .tab-searchbar-main{
