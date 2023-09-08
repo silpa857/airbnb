@@ -373,14 +373,14 @@ body{
 }
 .navigation-main-div{
     width: 100%;
-    padding: 24px 0px 0px 36px; 
+    padding: 24px 36px 0px 36px; 
     box-sizing: border-box;
     border-bottom: 0.5px solid rgba(0,0,0,0.08);
     box-shadow: 0 0.3px 0 solid rgba(0,0,0,0.1);
     overflow: hidden;
-    align-items: center;
+    /* align-items: center; */
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 .all-navbar{
     width: 100%;
@@ -417,17 +417,17 @@ body{
     /* justify-content: space-between; */
     margin: 12px 0px 10px;
     padding: 0px 0px 0px 0px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
 }
+.nav-icon-main:hover{
+    opacity: 1;
+} 
 .nav-icon{
     width: 24px;
     height: 24px;
     fill: #717171;
-    opacity: 0.6;
-    transition: opacity 0.2s ease-in-out;
     /* padding: 0px 0px 0px 0px; */
-}
-.nav-icon:hover{
-    opacity: 1;
 }
 .nav-text{
     height: 16px;
@@ -441,20 +441,112 @@ body{
     width: 150px;
     height: 78px;
     align-items: right;
+    display: flex;
 }
 .nav-scroll-div{
     width: 28px;
     height: 28px;
     background-color: #ffffff;
+    border-radius: 100%;
     border: 0.5px solid rgba(0,0,0,0.3);
-    justify-content: center;
+    display: flex;
+   
 }
 .scroll-icon{
     width: 12px;
     height: 12px;
+    margin: auto;
+    /* width: 50%; */
 }
 .navigation-scroll-header{
     overflow-x: hidden;
+}
+.tab-navigation-div{
+    width: 335.11px;
+    height: 78px;
+}
+.filter-icon-main{
+    width: 90.56px;
+    height: 45px;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    background-color: transparent;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+}
+.filter-icon-main-div{
+    width: 88.56px;
+    height: 18px;
+    padding: 2px 16px 0px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.filter-icon{
+    display: block;
+    height: 14px;
+    width: 14px;
+    fill: currentColor;
+}
+.filter-text{
+    width: 34.56px;
+    height: 16px;
+    font-size: 12px;
+    color: #222222;
+    display: block;
+    line-height: 1rem;
+    font-weight: 600;
+    font-family: "airnbnbmedium";
+}
+.taxes-main{
+    width: 235.33px;
+    height: 48px;
+    /* padding-left: 16px; */
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid #dddddd;
+    display: flex;
+
+}
+.taxes-main-div{
+    margin: auto;
+    display: flex;
+    margin: auto;
+}
+.taxes-text{
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-family: "airbnbmedium";
+    /* font-weight: 600; */
+}
+.movebutton-main{
+    background-color:#B0B0B0;
+    box-sizing: border-box;
+    border-radius: 32px;
+    border: 1px solid #B0B0B0;
+    position: relative;
+    outline: none;
+    min-width: 36px;
+    width: 36px;
+    height: 24px;
+    display: flex;
+}
+.movebutton-inside{
+    width: 24px;
+    height: 24px;
+   box-sizing: border-box;
+   border: 1px solid #B0B0B0;
+   border-radius: 50%;
+   background-color:#ffffff;   
+}
+.otherthan-scroll{
+    display: grid;
+    grid-auto-flow: column;
+    row-gap: 2px;
+    column-gap: 0px;
+    padding: 14px 0px 0px 0px;
 }
 @media screen and (min-width:744px){
     .headerdiv{
@@ -464,10 +556,14 @@ body{
         height: 98px;
         
     }
-    .all-navbar{
+    /* .all-navbar{
         width: 50%;
+    } */
+    .tab-navigation-div{
+        width: 335.11px;
+        height: 78px;
+        display: flex;
     }
-    
 }
 @media screen and (max-width:744px){
     .tab-header-div{
