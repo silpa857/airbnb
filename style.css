@@ -41,7 +41,8 @@ body{
     background: white;
     height: 70px;
     width: 100%;
-
+    position: fixed;
+    top: 0px;
 }
 .search-icon{
    display: block;
@@ -189,6 +190,9 @@ body{
     align-items: center;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    /* position: fixed; */
 }
 .airbnb-icon-div{
     align-items: center;
@@ -377,9 +381,14 @@ body{
     box-sizing: border-box;
     overflow: hidden;
     /* align-items: center; */
+    position: fixed;
     display: flex;
+    top: 70px;
+    background: white;
+    /* position: fixed; */
     /* justify-content: space-between; */
-    position: relative;
+
+    
 }
 .all-navbar{
     width: 100%;
@@ -461,7 +470,7 @@ body{
     width: 90.56px;
     height: 48px;
     display: inline-block;
-    position: relative;
+    /* position: relative; */
     box-sizing: border-box;
     display: flex;
     background-color: transparent;
@@ -492,12 +501,14 @@ body{
     font-family: "airbnbmedium";
 }
 .otherthan-nav{
-    margin-top: 24px;
+    margin-top: 168px;
+    margin-bottom: 30px;
     padding: 0px 24px;
     display: grid;
-    grid-auto-flow: row dense;
     column-gap: 24px;
     row-gap: 24px;
+    position: relative;
+    z-index: -1;
 }
 .taxes-main{
     width: 100%;
@@ -551,7 +562,7 @@ body{
    background-color:#ffffff;   
 }
 .movebutton-div{
-    padding-left: 8px;
+    padding-right: 16px;
 }
 .otherthan-scroll{
     display: grid;
@@ -583,15 +594,22 @@ body{
     width: 100%;
     height: 100%;
 }
-.image-main-div{
-    max-height:475px ;
-}
+/* .image-main-div{
+    width: 327px;
+    height: 310.64px;
+    
+} */
 .grid-image{
-    width: 100%;
+    width: 100%;/* .image-main-div{
+        width: 327px;
+        height: 310.64px;
+        
+    } */
     height: 100%;
     background: transparent;
     border: none;
     border-radius: 11px;
+    aspect-ratio: 20/19;
 }
 .like-main{
     width: 32px;
@@ -610,13 +628,16 @@ body{
 }
 .grid-image-div{
     display: flex;
-    position: relative;
+    height: 100%;
+    width: 100%;
+    position:relative;
 }
 .grid-text-div{
     display: grid;
     row-gap: 0px;
     column-gap: 0px;
     line-height: 19px;
+    margin-top: 12px;
 }
 .grid-text-head{
     text-overflow: ellipsis;
@@ -665,6 +686,21 @@ body{
     font-size: 15px;
     line-height: 19px;
 }
+.footer-main{
+    background:#f7f7f7;
+}
+.footer-firstpart{
+    width: 100%;
+    height: 429px;
+    padding: 48px 24px;
+}
+.heading-one{
+    height: 26px;
+    color: #222222;
+    font-family: "airbnbmedium";
+    font-size: 22px;
+    margin: 0px 0px 8px;
+}
 @media screen and (min-width:550px) {
     .main-grid{
         grid-template-columns: repeat(2,1fr);
@@ -677,6 +713,7 @@ body{
     }
     .navigation-main-div{
         height: 98px;
+        top: 80px;
         
     }
     /* .all-navbar{
@@ -687,6 +724,11 @@ body{
         height: 78px;
         display: flex;
     }
+    .otherthan-nav{
+        margin: 194px 0px 48px;
+        padding: 0px 40px;
+    }
+    
 }
 @media screen and (max-width:744px){
     .tab-header-div{
@@ -699,15 +741,24 @@ body{
     .filter-main{
         display: none;
     }
-    .otherthan-scroll{
-        display: none;
-    }
     .tab-navigation-div{
         width: 100%;
+    }
+    .image-main-div{
+        width: 327px;
+        height: 310.64px;
     }
     /* .taxes{
         display: none;
     } */
+    .otherthan-scroll{
+        display: none;
+    }
+}
+@media screen  and (min-width:950px){
+    .main-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
 }
 @media screen and (min-width:1024px){
     /* .tab-searchbar-main{
@@ -753,10 +804,23 @@ body{
     .tab-header-div{
         padding: 0px 80px;
     }
+    .main-grid{
+        grid-template-columns: repeat(4,1fr);
+    }
 }
 @media screen and (max-width:1126px){
     .airbnb-texticon-div{
         display: none;
     }
     
+}
+@media screen and (min-width:1640px){
+    .main-grid{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+@media screen and (min-width:1880px){
+    .main-grid{
+        grid-template-columns: repeat(6,1fr);
+    }
 }
