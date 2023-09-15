@@ -43,6 +43,7 @@ body{
     width: 100%;
     position: fixed;
     top: 0px;
+    z-index: 100;
 }
 .search-icon{
    display: block;
@@ -375,10 +376,14 @@ body{
 .airbnb-texticon-div{
     padding: 5px 0px 0px 0px;
 }
+::-webkit-scrollbar-button{
+    display: none;
+}
 .navigation-main-div{
     width: 100%;
     padding: 24px 36px 0px 36px; 
     box-sizing: border-box;
+    border-bottom:1px solid rgba(0,0,0,0.08);
     overflow: hidden;
     /* align-items: center; */
     position: fixed;
@@ -401,6 +406,7 @@ body{
     justify-content: space-between;
     padding: 0px 0px 0px 0px;
     overflow: scroll;
+    
 
 }
 .nav-icon-main{
@@ -504,7 +510,7 @@ body{
     margin-top: 168px;
     margin-bottom: 30px;
     padding: 0px 24px;
-    display: grid;
+    grid-auto-flow: column;
     column-gap: 24px;
     row-gap: 24px;
     position: relative;
@@ -517,6 +523,7 @@ body{
     box-sizing: border-box;
     border-radius: 12px;
     border: 1px solid #dddddd;
+    grid-column: 2/3;
    
 
 }
@@ -570,11 +577,15 @@ body{
     grid-auto-flow: column;
     row-gap: 2px;
     column-gap: 0px;
-    padding: 12px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 .taxes{
+    display: grid;
+    grid-auto-flow: column;
     padding: 0px 0px 0px 0px;
-    justify-content: space-between;
+    margin-bottom: 22px;
+    grid-template-columns:  repeat(1,1fr);
+    /* justify-content: space-between; */
     /* margin: auto; */
 }
 .filter-text-main{
@@ -687,6 +698,59 @@ body{
     font-size: 15px;
     line-height: 19px;
 }
+.map-pseudo-div{
+    width: 100%;
+    height: 10%;
+    background: transparent;
+    display: flex;
+    position: fixed;
+    top: 713px;
+    justify-content: center;
+    align-items: center;
+}
+.map-main-div{
+    width: 89.3px;
+    height: 40px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #222222;
+    align-items: center;
+    justify-content: center;
+    /* position: fixed;
+    top: 669px;
+    left: 142px; */
+}
+.map-div{
+    width: 49.38px;
+    height: 16px;
+    display: flex;
+    margin:11px 10px 10px 19px;
+    justify-content: space-between;
+}
+.showmap-div{
+    width: 92.45px;
+    height: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 0px 1px 19px;
+}
+.showmap-text{
+    width: 68.48px;
+    height: 18px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    font-family: "airbnbsmall";
+}
+.map-text{
+   font-family: "airbnbsmall";
+   font-size: 12px;
+   line-height: 16px;
+   color: white;
+   font-weight: 600;
+}
 .footer-main{
     background:#f7f7f7;
 }
@@ -735,6 +799,8 @@ body{
 .footer-grid-main{
     width: 100%;
     padding: 32px 0px 0px;
+    display: grid;
+    
 }
 .footer-grid{
     display: grid;
@@ -774,7 +840,7 @@ body{
     display: grid;
     grid-auto-flow: row;
     row-gap: 14px;
-    padding: 24px 0px;
+    padding: 22px 0px;
     box-sizing: border-box;
     border-bottom: 1px solid #dddddd;
 }
@@ -792,7 +858,7 @@ body{
     font-family: "airbnbsmall";
 }
 .footer-thirdpart{
-    padding: 25px 24px 24px 24px;
+    padding: 27px 24px 23px 24px;
     display: grid;
     grid-auto-flow:row;
 }
@@ -828,6 +894,7 @@ body{
     color: #222222;
     font-size: 14px;
     font-family: "airbnbmedium";
+    
 }
 .thirdpart-sectiontwo{
     height: 41.02px;
@@ -862,11 +929,17 @@ body{
 .twitter{
     margin-right: 16px;
 }
+
 @media screen and (min-width:550px) {
     .main-grid{
         grid-template-columns: repeat(2,1fr);
     }
-    
+    .taxes{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .taxes-main{
+        grid-column: 1/3;
+    }
 }
 @media screen and (min-width:744px){
     .headerdiv{
@@ -897,9 +970,6 @@ body{
         right: 36px;
         background: white;
     }
-    .taxes{
-        grid-column: 1/3;
-    }
     .footer-firstpart{
         padding: 48px 40px;
     }
@@ -907,11 +977,34 @@ body{
         justify-content: center;
     }
     .airbnb-inc{
-        align-items: center;
+        display: flex;
+        justify-content: center;
     }
     .thirdpart-sectiontwo{
         align-items: center;
     }
+    .map-main-div{
+        width: 132.48px;
+        height: 48px;
+        top:669px;
+        left: 145px;
+    }
+    .map-div{
+        display: none;
+    }
+    
+    .map-pseudo-div{
+        top: 718px;
+    }
+    .footer-secondpart{
+        padding: 0px 40px;
+    }
+    .other-view-footer{
+        display: none;
+    }
+   .other-footer-thirdpart{
+    display: none;
+   }
 }
 @media screen and (max-width:744px){
     .tab-header-div{
@@ -937,14 +1030,33 @@ body{
     .socialmedia-main{
         display: none;
     }
+    .showmap-div{
+        display: none;
+    }
+    .tab-view-footer{
+        display: none;
+    }
+    .other-view-footer{
+        display: none;
+    }
+    .other-footer-thirdpart{
+        display: none;
+    }
 }
 @media screen  and (min-width:950px){
     .main-grid{
         grid-template-columns: repeat(3,1fr);
     }
     .taxes{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .taxes-main{
         grid-column: 1/4;
     }
+    .footer-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
 }
 @media screen and (min-width:1024px){
     .tab-anywhere{
@@ -977,6 +1089,9 @@ body{
         height: 22px;
         min-width: (80px,0px);
     }
+    .footer-secondpart-grid{
+        grid-auto-flow: column;
+    }
     
    
 }
@@ -991,10 +1106,16 @@ body{
         grid-template-columns: repeat(4,1fr);
     }
     .taxes{
-        grid-column:3/5;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .taxes-main{
+        grid-column: 1/2;
     }
     .footer-firstpart{
         padding: 48px 80px;
+    }
+    .other-view-footer{
+        display: none;
     }
 }
 @media screen and (max-width:1126px){
@@ -1007,7 +1128,49 @@ body{
         grid-template-columns: repeat(5,1fr);
     }
     .taxes{
-        grid-column: 4/6;
+        grid-template-columns: repeat(5,1fr);
+    }
+    .taxes-main{
+        grid-column: 1/2;
+    }
+    .other-view-footer{
+        display: none;
+    }
+}
+@media screen and (min-width:1440px) {
+    .footer-grid{
+        grid-template-columns: repeat(6,1fr);
+    }
+    .taxes{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .taxes-main{
+        grid-column: 2/4;
+    }
+    .other-view-footer{
+        display: contents;
+    }
+    /* .other-footer-thirdpart{
+        display: contents;
+    } */
+    .footer-thirdpart{
+        display: none;
+    }
+    .other-footer-thirdpart{
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 558px;
+        padding:14px 80px;
+    }
+    .thirdpart-sectiontwo{
+        display: flex;
+        width: 100%;
+    }
+    .thirdpart-sectionone{
+        margin-bottom: 0px;
+    }
+    .footer-secondpart{
+        padding: 0px 80px;
     }
 }
 @media screen and (min-width:1880px){
@@ -1015,7 +1178,9 @@ body{
         grid-template-columns: repeat(6,1fr);
     }
     .taxes{
-        grid-column: 5/7;
+        grid-template-columns: repeat(6,1fr);
+    }
+    .taxes-main{
+        grid-column: 3/5;
     }
 }
-
