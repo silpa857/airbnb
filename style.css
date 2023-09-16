@@ -442,7 +442,7 @@ body{
 .filter-main-div{
     width: 28px;
     height: 28px;
-    padding: 9px 0px 0px 0px;
+    padding: 11px 0px 0px 0px;
 }
 .filter-main{
     width: 150px;
@@ -492,6 +492,7 @@ body{
     margin: auto;
 }
 .filter-icon{
+    margin-top: 3px;
     height: 14px;
     width: 14px;
     fill: currentColor;
@@ -596,8 +597,8 @@ body{
     /* height: 100%; */
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    row-gap: 35px;
-    column-gap: 20px;
+    row-gap: 40px;
+    column-gap: 24px;
 }
 .main-body-griditem{
     display: grid;
@@ -626,7 +627,6 @@ body{
 .like-main{
     width: 32px;
     height: 32px;
-    background: transparent;
     margin: -2px 0px 0px;
     padding: 2px 0px 0px;
     z-index: 10;
@@ -648,7 +648,7 @@ body{
     display: grid;
     row-gap: 0px;
     column-gap: 0px;
-    line-height: 19px;
+    line-height: 23px;
     margin-top: 12px;
 }
 .grid-text-head{
@@ -872,6 +872,8 @@ body{
 }
 .footer-glob-icon{
     margin-right: 8px;
+    height: 16px;
+    width: 16px;
 }
 .thirdpart-sectionone-textone{
     white-space: nowrap;
@@ -950,6 +952,8 @@ body{
         height: 98px;
         top: 80px;
         position: fixed;
+        padding: 20px 40px 0px 40px;
+        border-bottom: none;
         
     }
     .tab-navigation-div{
@@ -966,8 +970,8 @@ body{
     }
     .otherthan-scroll{
         position: absolute;
-        top: 33px;
-        right: 36px;
+        top: 34px;
+        right: 40px;
         background: white;
     }
     .footer-firstpart{
@@ -982,6 +986,7 @@ body{
     }
     .thirdpart-sectiontwo{
         align-items: center;
+        height: 100%;
     }
     .map-main-div{
         width: 132.48px;
@@ -1004,6 +1009,29 @@ body{
     }
    .other-footer-thirdpart{
     display: none;
+   }
+   .footer-thirdpart{
+    height: 124px;
+    padding: 24px 40px 24px 40px;
+   }
+   .thirdpart-sectionone{
+    margin-bottom: 18px;
+    margin-left: 9px;
+    justify-items: center;
+    align-items: center;
+   }
+   .social-media-main{
+    margin-left: 47px;
+   }
+   .thirdpart-sectionone-main{
+    width: 100%;
+    align-items: center;
+   }
+   .facebook{
+    margin-right: 11px;
+   }
+   .twitter{
+    margin-right: 11px;
    }
 }
 @media screen and (max-width:744px){
@@ -1041,6 +1069,9 @@ body{
     }
     .other-footer-thirdpart{
         display: none;
+    }
+    .taxes{
+        display: flex;
     }
 }
 @media screen  and (min-width:950px){
