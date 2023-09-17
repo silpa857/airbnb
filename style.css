@@ -1211,9 +1211,7 @@ body{
     .other-view-footer{
         display: contents;
     }
-    /* .other-footer-thirdpart{
-        display: contents;
-    } */
+  
     .footer-thirdpart{
         display: none;
     }
