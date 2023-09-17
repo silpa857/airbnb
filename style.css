@@ -217,11 +217,10 @@ body{
     background: transparent;
     padding-left: 25px;
     border: 1px solid transparent;
-    margin: -1px;
     overflow: hidden;
     width: 130px;
     height: 26px;
-    padding: 1px 0px 0px 23px;
+    padding: 1px 16px 0px 22px;
 }
 .tab-anywhere{
     font-size: 14px;
@@ -279,7 +278,7 @@ body{
     height: 22px;
 }
 .tab-addguests{
-    padding: 1px 16px 0px 16px;
+    padding: 0px 16px;
     color: #717171;
     font-weight: 400;
     font-size: 14px;
@@ -368,7 +367,7 @@ body{
     height: 30px;
 }
 .airbnb-texticon-div{
-    padding: 5px 0px 0px 0px;
+    padding: 6px 0px 0px 0px;
 }
 ::-webkit-scrollbar-button{
     display: none;
@@ -830,8 +829,8 @@ body{
     row-gap: 0px;
 }
 .footer-secondpart-grid-item{
-    display: grid;
-    grid-auto-flow: row;
+    /* display: grid;
+    grid-auto-flow: row; */
     padding: 24px 0px;
     box-sizing: border-box;
     border-bottom: 1px solid #dddddd;
@@ -839,7 +838,7 @@ body{
 .inner-grid-encloser{
     display: grid;
     grid-auto-flow: row;
-    row-gap: 12px;
+    row-gap: 14px;
     box-sizing: border-box;
 }
 .footer-secondpart-grid-item-head{
@@ -848,7 +847,7 @@ body{
     color: #222222;
     font-family: "airbnbmedium";
     margin: 0;
-    margin-bottom: 12px;
+    margin-bottom: 13px;
 }
 .footer-secondpart-grid-item-body{
     height: 18px;
@@ -857,13 +856,13 @@ body{
     font-family: "airbnbsmall";
 }
 .footer-thirdpart{
-    padding: 27px 24px 23px 24px;
+    padding: 25px 24px 24px 24px;
     display: grid;
     grid-auto-flow:row;
 }
 .thirdpart-sectionone{
     display: flex;
-    margin-bottom: 17px;
+    margin-bottom: 11px;
 }
 .thirdpart-glob-english{
     display: flex;
@@ -897,6 +896,7 @@ body{
 }
 .thirdpart-sectiontwo{
     height: 41.02px;
+    margin-top: 18px;
 }
 .airbnb-inc{
     height: 18px;
@@ -928,6 +928,7 @@ body{
 .twitter{
     margin-right: 16px;
 }
+
 
 @media screen and (min-width:550px) {
     .main-grid{
@@ -1004,21 +1005,19 @@ body{
     .other-view-footer{
         display: none;
     }
-   .other-footer-thirdpart{
-    display: none;
-   }
    .footer-thirdpart{
     height: 124px;
-    padding: 24px 40px 24px 40px;
+    padding: 25px 40px 24px 40px;
    }
    .thirdpart-sectionone{
-    margin-bottom: 18px;
-    margin-left: 9px;
-    justify-items: center;
+    height: 18px;
+    margin-bottom: 11px;
+    justify-content: center;
     align-items: center;
    }
-   .social-media-main{
-    margin-left: 47px;
+   .socialmedia-main{
+    margin-left: 48px;
+    height: 18px;
    }
    .thirdpart-sectionone-main{
     width: 100%;
@@ -1030,6 +1029,10 @@ body{
    .twitter{
     margin-right: 11px;
    }
+   .other-footer-thirdpart{
+    display: none;
+   }
+   
 }
 @media screen and (max-width:744px){
     .tab-header-div{
@@ -1070,6 +1073,11 @@ body{
     .taxes{
         display: flex;
     }
+    .thirdpart-sectionone{
+        justify-content: normal;
+        align-items: center;
+    }
+   
 }
 @media screen  and (min-width:950px){
     .main-grid{
@@ -1106,7 +1114,7 @@ body{
         height: 22px;
     }
     .tab-addguests{
-        padding: 1px 16px 0px 16px;
+        padding: 1px 14px 0px 17px;
         color: #717171;
         font-weight: 400;
         font-size: 14px;
@@ -1119,9 +1127,31 @@ body{
     }
     .footer-secondpart-grid{
         grid-auto-flow: column;
+        column-gap: 8px;
     }
-   /* .image-div{
-   }  */
+   .tab-searchbar{
+    flex: 0 1 auto;
+    width: 349px;
+   }
+   .pesudo-for-searchbar{
+    display: flex;
+    flex: 1 0 140px;
+   }
+   .tab-searchbar-main{
+    padding: 0px 30px;
+   }
+   .inner-grid-encloser{
+    row-gap: 14px;
+   }
+   .footer-secondpart-grid-item{
+    padding: 49px 0px 48px 0px;
+    width: 309.33px;
+    height: 306.09px;
+    border-bottom: none;
+   }
+   .footer-secondpart{
+    border-bottom: 1px solid #dddddd;
+   }
    
 }
 @media screen and (min-width:1126px){
@@ -1146,6 +1176,7 @@ body{
     .other-view-footer{
         display: none;
     }
+    
 }
 @media screen and (max-width:1126px){
     .airbnb-texticon-div{
@@ -1189,15 +1220,21 @@ body{
     .other-footer-thirdpart{
         display: grid;
         grid-auto-flow: column;
-        column-gap: 558px;
-        padding:14px 80px;
+        column-gap: 565px;
+        padding:20px 80px;
+        align-items: center;
+        height: 67.9px;
     }
     .thirdpart-sectiontwo{
         display: flex;
-        width: 100%;
+        width: 453.36px;
+        height: 28.02px;
+        margin-bottom: 0px;
     }
     .thirdpart-sectionone{
-        margin-bottom: 0px;
+        width: 261.64px;
+        height: 20.02px;
+        margin-bottom: 3px;
     }
     .footer-secondpart{
         padding: 0px 80px;
@@ -1219,7 +1256,31 @@ body{
         margin-top: 0px;
         line-height: 21px;
     }
-    
+    .pesudo-for-accountinfo{
+        display: flex;
+        flex: 1 0 140px;
+        justify-content: right;
+    }
+    .tab-searchbar{
+        width: 352.2px;
+    }
+    .facebook{
+        margin-right: 11px;
+       }
+       .twitter{
+        margin-right: 11px;
+       }
+    .socialmedia-main{
+        margin-left: 24px;
+    }
+    .privacy-terms{
+        margin-top: 0px;
+        margin-left: 19px;
+    }
+    .airbnb-inc{
+        margin-bottom: 0px;
+        margin-left: -4px;
+    }
 }
 @media screen and (min-width:1880px){
     .main-grid{
