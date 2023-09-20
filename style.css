@@ -200,6 +200,7 @@ body{
     padding: 0px 24px;
     flex: 0 1 auto;
     min-width: 348px;
+    cursor: pointer;
 }
 .tab-searchbar{
     background-color: white;
@@ -318,12 +319,15 @@ body{
    height: 80px; 
    display: flex;
    padding: 2px 0px 0px 0px;
+   cursor: pointer;
 }
 .yourhome-main{
+    box-sizing: border-box;
     width: 148.34px;
     height: 42px;
     padding: 29px 0px 0px 12px;
 }
+
 .yourhome{
     width: 118.34px;
     height: 18px;
@@ -331,6 +335,7 @@ body{
     font-family: "airbnbmedium";
     font-size: 14px;
     justify-content: space-between;
+    /* margin: auto; */
 }
 .glob-main{
     width: 46px;
@@ -370,6 +375,7 @@ body{
 }
 .airbnb-texticon-div{
     padding: 6px 0px 0px 0px;
+    cursor: pointer;
 }
 
 .navigation-main-div{
@@ -382,7 +388,7 @@ body{
     display: flex;
     top: 70px;
     background: white;
-    z-index: 100;
+    z-index: 80;
 }
 .all-navbar{
     width: 100%;
@@ -400,10 +406,6 @@ body{
 .all-navbar::-webkit-scrollbar{
     display: none;
 }
-.show-selection{
-    box-sizing: border-box;
-    border-bottom: 2px black;
-}
 .nav-icon-main{
     width: 64px;
     height: 44px;
@@ -414,35 +416,58 @@ body{
     padding: 0px 0px 0px 0px;
     opacity: 0.6;
     transition: opacity 0.2s ease-in-out;
-    
+   
 }
-.show-selection{
-    box-sizing: border-box;
-    border-bottom: 2px solid black;
-}
-
-.selection-hovering-effect:hover{
-    box-sizing: border-box;
-    border-bottom: 2px solid #B0B0B0;
+.nav-icon-main::after{
+    content: "";
+    left: 0px;
+    right: 0px;
+    /* height: 1px; */
+    background: #B0B0B0;
+    position: absolute;
+    bottom: 0px;
 }
 .nav-icon-main:hover{
     opacity: 1;
-    
-    
-} 
+   
+}
+.show-selection{
+    border-bottom: 4px solid black;
+}
+.selection-hovering-effect{
+    position: relative;
+}
+.selection-hovering-effect:hover .nav-icon-main::after{
+   height:1px;
+}
+/* .selection-hovering-effect::after{
+    box-sizing: border-box;
+    border-bottom: 2px solid #B0B0B0 ;
+} */
+/* .nav-icon-main:hover{
+    box-sizing: border-box;
+    border-bottom: 2px solid #B0B0B0;
+} */
+/* .nav-icon-main::after:hover{
+    box-sizing: border-box;
+    border-bottom: 2px solid black;
+} */
+
+ 
 .nav-icon{
     width: 24px;
     height: 24px;
-    fill: #717171;
+    fill:black;
 }
 .nav-text{
     height: 16px;
-    color: #717171;
+    color:black;
     font-size: 12px;
     font-family: "airbnbmedium";
     line-height: 25px;
     white-space: nowrap;
 }
+
 .filter-main-div{
     width: 28px;
     height: 28px;
@@ -519,6 +544,9 @@ body{
     overflow-y: scroll;
     /* z-index: -1; */
     /* max-width: 2360px; */
+}
+.otherthan-nav::-webkit-scrollbar{
+    display: none;
 }
 .taxes-main{
     width: 100%;
@@ -607,11 +635,9 @@ body{
     height: 100%;
 }
 .grid-image{
-    width: 327px;
-    height: 310px;
+    width: 100%;
     background: transparent;
     border: none;
-    border-radius: 11px;
     aspect-ratio: 20/19;
 }
 .like-main{
@@ -633,11 +659,9 @@ body{
     /* height: ;
     width: 5px; */
     background: transparent;
-     z-index: 10;
-     top: 20px;
      position: absolute;
-     top: 302px;
-     left: 148px;
+     bottom: 10%;
+     left: 50%;
      display: flex;
      justify-content: space-between;
 }
@@ -655,12 +679,14 @@ body{
     background:#B0B0B0;
     margin-right: 6px;
 }
+
 .grid-image-div{
     display: flex;
     height: 310px;
     width: 327px;
     position:relative;
     overflow-x: hidden;
+    border-radius: 11px;
 }
 .slider{
     display: flex;
@@ -669,6 +695,38 @@ body{
 }
 .slider::-webkit-scrollbar{
     display: none;
+}
+.slider-button-left-container{
+    width: 32px;
+    height: 32px;
+    border-radius: 40px;
+    background: white;
+    left: 10px;
+    top: 50%;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+}
+.slider-button-left{
+    margin: auto;
+    width: 12px;
+    height: 12px;
+}
+.slider-button-right-container{
+    width: 32px;
+    height: 32px;
+    border-radius: 40px;
+    background: white;
+    right: 10px;
+    top: 50%;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+}
+.slider-button-right{
+    margin: auto;
+    width: 12px;
+    height: 12px;
 }
 .grid-image-div::-webkit-scrollbar{
     display: none;
@@ -685,6 +743,9 @@ body{
     color: #222222;
     font-size: 15px;
     font-family: "airbnbmedium";
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 .rupee-section{
     display: flex;
@@ -705,11 +766,12 @@ body{
 .rating-main{
     width: 46.23px;
     height: 19px;
-    grid-column: -2/-1;
-    grid-row: 1;
+    /* grid-column: -2/-1;
+    grid-row: 1; */
     justify-self: end;
     display: flex;
     line-height: 0px;
+    align-items: center;
 }
 .star{
     width: 12px;
@@ -732,7 +794,7 @@ body{
     background: transparent;
     display: flex;
     position: fixed;
-    top: 669px;
+    top: 725px;
     justify-content: center;
     align-items: center;
     z-index: 100;
@@ -850,6 +912,7 @@ body{
    color: #222222;
    height: 18px; 
    font-family: "airbnbmedium";
+   
 }
 .footer-grid-item-body{
     color: #717171;
@@ -962,6 +1025,9 @@ body{
 .twitter{
     margin-right: 16px;
 }
+.nav-notation-change{
+    color: #717171;
+}
 
 
 @media screen and (min-width:550px) {
@@ -978,6 +1044,7 @@ body{
         margin-left: -12px;
         margin-right: 12px;
     }
+ 
 }
 @media screen and (min-width:744px){
     .headerdiv{
@@ -1098,6 +1165,9 @@ body{
    .footer-grid-main{
     padding: 36px 0px;
    }
+   .show-selection{
+    border-bottom: 2px solid black;
+   }  
 }
 @media screen and (max-width:744px){
     .tab-header-div{
@@ -1140,6 +1210,12 @@ body{
         justify-content: normal;
         align-items: center;
     }
+    .slider-button-left-container{
+        display: none;
+    }
+    .slider-button-right-container{
+        display: none;
+    }
    
 }
 @media screen  and (min-width:950px){
@@ -1157,6 +1233,7 @@ body{
     .footer-grid{
         grid-template-columns: repeat(3,1fr);
     }
+   
     
 }
 @media screen and (min-width:1024px){
@@ -1242,6 +1319,7 @@ body{
    .footer-grid-main{
     padding: 25px 0px 0px;
    }
+   
 }
 @media screen and (min-width:1126px){
     .airbnb-icon-div{
@@ -1265,6 +1343,7 @@ body{
     .other-view-footer{
         display: none;
     }
+   
     
 }
 @media screen and (max-width:1126px){
@@ -1285,6 +1364,7 @@ body{
     .other-view-footer{
         display: none;
     }
+    
 }
 
 @media screen and (min-width:1440px) {
@@ -1384,6 +1464,7 @@ body{
         height: 369px;
         padding: 48px 80px;
     }
+    
 }
 @media screen and (min-width:1880px){
     .main-grid{
@@ -1395,10 +1476,14 @@ body{
         grid-template-columns: repeat(6,1fr);
         column-gap: 24px;
     }
+    .taxes-main-div{
+        /* grid-column: 3/4; */
+        width: 100%;
+        /* margin-left: 213px;
+        width: 557.33px; */
+    }
     .taxes-main{
-        grid-column: 3/4;
-        margin-left: 213px;
-        width: 557.33px;
+        margin-left: 0px;
     }
     .grid-image-div{
         width: 266.66px;
@@ -1409,14 +1494,14 @@ body{
         padding: 0px 80px 0px 80px;
     }
     .navigation-main-div{
-        width: 1849px;
+        width: 100%;
         padding: 20px 80px 0px 80px;
         /* margin: 0px 20px 0px 20px; */
     }
     .otherthan-nav{
         width: 100%;
         padding: 0px 80px;
-        /* margin:195px 20px 0px 20px; */
+        margin: 195px 0px 48px;
         
     }
     .grid-image{
@@ -1425,24 +1510,29 @@ body{
     }
     
     .otherthan-scroll{
-        right: 49px;
+        right: 80px;
     }
     .map-pseudo-div{
-        top: 849px;
+        top: 842px;
     }
     .footer-firstpart{
-        padding: 48px 384px 48px 384px;
+        padding: 47px 386px 48px 387px;
     }
     .footer-nav{
         display: grid;
         grid-auto-flow: column;
         justify-content: left;
         align-items: center;
-        margin-top: 26px;
+        margin-top: 24px;
     }
     .other-footer-bottom-section{
-        padding: 20px 383px;
+        display: grid;
+        grid-auto-flow: column;
+        column-gap: 525px;
+        padding: 21px 383px 20px 380px;
         column-gap: 397px;
+        justify-content: center;
+        align-items: center;
     }
     .heading-one{
         margin-top: 0px;
@@ -1460,9 +1550,71 @@ body{
         top: 233px;
         left: 108px;
     }
-    .rating-main{
-        padding-top: 21px;
+    .grid-text-div{
+        margin-top: 9px;
+        line-height: 23px;
     }
+    .nav-icon-main{
+        width: 100%;
+    }
+    .bottom-section-sectionone{
+        margin-bottom: 0px;
+    }
+    .footer-midsection-grid-item{
+        padding: 49px 0px 48px 0px;
+    }
+    .footer-midsection-grid-item-head{
+      margin-bottom: 14px;   
+    }
+    .yourhome-main:hover{
+        border-radius: 22px;
+        background:#F8F8F8;   
+        padding: 0px 0px 0px 0px;
+        align-items: center;
+        margin-top: 18px;
+        padding-top: 11px;
+        padding-left: 12px;
+     }
+    .yourhome:hover{
+         margin-top: 12px;
+         margin-top: 0px;
+
+    }
+    .yourhome{
+        padding-right: 0px;
+    }
+    .glob-main:hover{
+       width: 46px;
+       height:42px;
+       box-sizing: border-box;
+       border-radius: 22px;
+       background: #f8f8f8;
+       margin-top: 16px;
+       padding-top: 13px;
+       padding-bottom: 4px;
+       padding-left: 13px;
+       margin-left: -3px;
+       margin-right: 4px;
+       /* padding-left: -3px;
+       margin-right: -3px; */
+    
+    }
+    .glob-icon{
+        margin-bottom: 1px;
+    }
+    .dashboard{
+        margin-bottom: 1px;
+    }
+    .tab-searchbar{
+        width: 361.19px;
+    }
+    .dashboard-person-main:hover{
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2),
+        0 4px 10px rgba(0,0,0,0.1); 
+
+    }
+    
+    
     @media screen and (min-width:2560px) {
         .otherthan-nav{
             width: 2520px;
