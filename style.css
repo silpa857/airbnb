@@ -4,7 +4,6 @@
 body{
     padding: 0;
     margin: 0;
-    /* overflow-y: hidden; */
 }
 @font-face {
     font-family: "airbnbbold";
@@ -406,7 +405,7 @@ body{
 .all-navbar::-webkit-scrollbar{
     display: none;
 }
-.nav-icon-main{
+.nav-item-main{
     width: 64px;
     height: 44px;
     display: flex;
@@ -418,16 +417,15 @@ body{
     transition: opacity 0.2s ease-in-out;
    
 }
-.nav-icon-main::after{
+.nav-item-main::after{
     content: "";
     left: 0px;
     right: 0px;
-    /* height: 1px; */
     background: #B0B0B0;
     position: absolute;
     bottom: 0px;
 }
-.nav-icon-main:hover{
+.nav-item-main:hover{
     opacity: 1;
    
 }
@@ -437,23 +435,9 @@ body{
 .selection-hovering-effect{
     position: relative;
 }
-.selection-hovering-effect:hover .nav-icon-main::after{
+.selection-hovering-effect:hover .nav-item-main::after{
    height:1px;
 }
-/* .selection-hovering-effect::after{
-    box-sizing: border-box;
-    border-bottom: 2px solid #B0B0B0 ;
-} */
-/* .nav-icon-main:hover{
-    box-sizing: border-box;
-    border-bottom: 2px solid #B0B0B0;
-} */
-/* .nav-icon-main::after:hover{
-    box-sizing: border-box;
-    border-bottom: 2px solid black;
-} */
-
- 
 .nav-icon{
     width: 24px;
     height: 24px;
@@ -542,8 +526,6 @@ body{
     column-gap: 24px;
     row-gap: 24px;
     overflow-y: scroll;
-    /* z-index: -1; */
-    /* max-width: 2360px; */
 }
 .otherthan-nav::-webkit-scrollbar{
     display: none;
@@ -655,9 +637,7 @@ body{
     width: 24px;
     height: 24px;
 }
-.more-div{
-    /* height: ;
-    width: 5px; */
+.carousels-container{
     background: transparent;
      position: absolute;
      bottom: 10%;
@@ -665,14 +645,14 @@ body{
      display: flex;
      justify-content: space-between;
 }
-.more{
+.carousels{
     width: 5px;
     height: 5px;
     border-radius: 40px;
     background: white;
     margin-right: 6px;
 }
-.more-other{
+.carousels-other{
     width: 5px;
     height: 5px;
     border-radius: 40px;
@@ -766,8 +746,6 @@ body{
 .rating-main{
     width: 46.23px;
     height: 19px;
-    /* grid-column: -2/-1;
-    grid-row: 1; */
     justify-self: end;
     display: flex;
     line-height: 0px;
@@ -1307,7 +1285,7 @@ body{
     width: 298px;
     height: 283.72px;
    } 
-   .more-div{
+   .carousels-container{
     top: 268px;
    } 
    .bottom-section-sectionone-main{
@@ -1477,10 +1455,7 @@ body{
         column-gap: 24px;
     }
     .taxes-main-div{
-        /* grid-column: 3/4; */
         width: 100%;
-        /* margin-left: 213px;
-        width: 557.33px; */
     }
     .taxes-main{
         margin-left: 0px;
@@ -1490,13 +1465,11 @@ body{
         height: 253.31px;
     }
     .tab-header-div{
-        /* margin: 0px 20px 0px 20px; */
         padding: 0px 80px 0px 80px;
     }
     .navigation-main-div{
         width: 100%;
         padding: 20px 80px 0px 80px;
-        /* margin: 0px 20px 0px 20px; */
     }
     .otherthan-nav{
         width: 100%;
@@ -1546,7 +1519,7 @@ body{
     .footer-midsection{
         padding: 0px 382px;
     }
-    .more-div{
+    .carousels-container{
         top: 233px;
         left: 108px;
     }
@@ -1554,7 +1527,7 @@ body{
         margin-top: 9px;
         line-height: 23px;
     }
-    .nav-icon-main{
+    .nav-item-main{
         width: 100%;
     }
     .bottom-section-sectionone{
@@ -1595,9 +1568,6 @@ body{
        padding-left: 13px;
        margin-left: -3px;
        margin-right: 4px;
-       /* padding-left: -3px;
-       margin-right: -3px; */
-    
     }
     .glob-icon{
         margin-bottom: 1px;
