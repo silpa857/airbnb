@@ -175,6 +175,7 @@ body{
     display: flex;
     fill: #222222;
 }
+
 /* tablet */
 .tab-header-div{
     width:100%;
@@ -189,7 +190,6 @@ body{
     position: fixed;
     top: 0px;
     z-index: 100;
-   
 }
 .airbnb-icon-div{
     align-items: center;
@@ -376,7 +376,6 @@ body{
     padding: 6px 0px 0px 0px;
     cursor: pointer;
 }
-
 .navigation-main-div{
     width: 100%;
     padding: 24px 36px 0px 36px; 
@@ -415,7 +414,6 @@ body{
     padding: 0px 0px 0px 0px;
     opacity: 0.6;
     transition: opacity 0.2s ease-in-out;
-   
 }
 .nav-item-main::after{
     content: "";
@@ -427,7 +425,6 @@ body{
 }
 .nav-item-main:hover{
     opacity: 1;
-   
 }
 .show-selection{
     border-bottom: 4px solid black;
@@ -451,7 +448,6 @@ body{
     line-height: 25px;
     white-space: nowrap;
 }
-
 .filter-main-div{
     width: 28px;
     height: 28px;
@@ -470,7 +466,6 @@ body{
     border-radius: 100%;
     border: 0.5px solid rgba(0,0,0,0.3);
     display: flex;
-   
 }
 .scroll-icon{
     width: 12px;
@@ -537,8 +532,6 @@ body{
     border-radius: 12px;
     border: 1px solid #dddddd;
     grid-column: 2/3;
-
-
 }
 .taxes-main-div{
     display: flex;
@@ -558,7 +551,6 @@ body{
     height: 17px;
     margin-top: 13px;
     margin-bottom: auto;
-    
 }
 .movebutton-main{
     background-color:#B0B0B0;
@@ -659,7 +651,6 @@ body{
     background:#B0B0B0;
     margin-right: 6px;
 }
-
 .grid-image-div{
     display: flex;
     height: 310px;
@@ -835,11 +826,9 @@ body{
     margin: 0px 0px 8px;
 }
 .footer-nav-main{
- padding-top: 16px;
- box-sizing: border-box;
- border-bottom: 1px solid #DDDDDD;
- 
- 
+   padding-top: 16px;
+   box-sizing: border-box;
+   border-bottom: 1px solid #DDDDDD;
 }
 .footer-nav{
     display: grid;
@@ -869,7 +858,6 @@ body{
     width: 100%;
     padding: 32px 0px 0px;
     display: grid;
-
 }
 .footer-grid{
     display: grid;
@@ -890,7 +878,6 @@ body{
    color: #222222;
    height: 18px; 
    font-family: "airbnbmedium";
-   
 }
 .footer-grid-item-body{
     color: #717171;
@@ -1006,8 +993,6 @@ body{
 .nav-notation-change{
     color: #717171;
 }
-
-
 @media screen and (min-width:550px) {
     .main-grid{
         grid-template-columns: repeat(2,1fr);
@@ -1035,7 +1020,6 @@ body{
         position: fixed;
         padding: 20px 40px 0px 40px;
         border-bottom: none;
-        
     }
     .tab-navigation-div{
         width: 100%;
@@ -1080,7 +1064,6 @@ body{
     .map-div{
         display: none;
     }
-    
     .map-pseudo-div{
         top: 704px;
     }
@@ -1210,9 +1193,7 @@ body{
     }
     .footer-grid{
         grid-template-columns: repeat(3,1fr);
-    }
-   
-    
+    }    
 }
 @media screen and (min-width:1024px){
     .tab-anywhere{
@@ -1320,10 +1301,7 @@ body{
     }
     .other-view-footer{
         display: none;
-    }
-   
-    
-}
+    }}
 @media screen and (max-width:1126px){
     .airbnb-texticon-div{
         display: none;
@@ -1342,9 +1320,7 @@ body{
     .other-view-footer{
         display: none;
     }
-    
 }
-
 @media screen and (min-width:1440px) {
     .footer-grid{
         grid-template-columns: repeat(6,1fr);
@@ -1433,16 +1409,18 @@ body{
         margin-right: 0px;
     }
     .footer-midsection-grid-item{
-        padding: 48px 0px 48px 0px;
+        padding: 49px 0px 48px 0px;
     }
     .footer-grid-main{
-        padding: 32px 0px 0px;
+        padding: 26px 0px 0px;
     }
     .footer-firstpart{
         height: 369px;
         padding: 48px 80px;
     }
-    
+    .map-pseudo-div{
+        top: 635px;
+    }
 }
 @media screen and (min-width:1880px){
     .main-grid{
@@ -1486,10 +1464,10 @@ body{
         right: 80px;
     }
     .map-pseudo-div{
-        top: 842px;
+        top: 675px;
     }
     .footer-firstpart{
-        padding: 47px 386px 48px 387px;
+        padding: 55px 383px 48px 383px;
     }
     .footer-nav{
         display: grid;
@@ -1502,8 +1480,8 @@ body{
         display: grid;
         grid-auto-flow: column;
         column-gap: 525px;
-        padding: 21px 383px 20px 380px;
-        column-gap: 397px;
+        padding: 20px 383px 20px 380px;
+        column-gap: 401px;
         justify-content: center;
         align-items: center;
     }
@@ -1583,8 +1561,6 @@ body{
         0 4px 10px rgba(0,0,0,0.1); 
 
     }
-    
-    
     @media screen and (min-width:2560px) {
         .otherthan-nav{
             width: 2520px;
