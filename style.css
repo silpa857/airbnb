@@ -1425,18 +1425,21 @@ body{
 @media screen and (min-width:1880px){
     .main-grid{
         grid-template-columns: repeat(6,1fr);
-        column-gap: 24px;
+        column-gap: 20px;
         row-gap: 40px;
     }
     .taxes{
         grid-template-columns: repeat(6,1fr);
-        column-gap: 24px;
+        column-gap: 20px;
     }
     .taxes-main-div{
         width: 100%;
+        margin-left: 10px;
     }
     .taxes-main{
-        margin-left: 0px;
+        margin-left: 202px;
+        width: 556px;
+        grid-column: 3/4;
     }
     .grid-image-div{
         width: 266.66px;
@@ -1464,10 +1467,10 @@ body{
         right: 80px;
     }
     .map-pseudo-div{
-        top: 675px;
+        top: 1036px;
     }
     .footer-firstpart{
-        padding: 55px 383px 48px 383px;
+        padding: 47px 383px 48px 383px;
     }
     .footer-nav{
         display: grid;
@@ -1479,7 +1482,7 @@ body{
     .other-footer-bottom-section{
         display: grid;
         grid-auto-flow: column;
-        column-gap: 525px;
+        column-gap: 560px;
         padding: 20px 383px 20px 380px;
         column-gap: 401px;
         justify-content: center;
@@ -1487,7 +1490,7 @@ body{
     }
     .heading-one{
         margin-top: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 27px;
     }
     .footer-nav-main{
         padding: 0px;
@@ -1561,14 +1564,29 @@ body{
         0 4px 10px rgba(0,0,0,0.1); 
 
     }
+    @media screen and (min-width:1920px) {
+        .taxes-main-div{
+            padding-left: 0px;
+        }
+   
+        .map-pseudo-div{
+            top:795px;
+        }
+      
+       
+    }
     @media screen and (min-width:2560px) {
         .otherthan-nav{
             width: 2520px;
             margin: 16px 0px 48px;
             padding: 0px 80px;
         }
-        
+        .main-grid{
+            column-gap: 0px;
+        }
+
     }
+  
 
 
 }
