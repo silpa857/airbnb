@@ -175,6 +175,7 @@ body{
     display: flex;
     fill: #222222;
 }
+
 /* tablet */
 .tab-header-div{
     width:100%;
@@ -188,7 +189,7 @@ body{
     justify-content: space-between;
     position: fixed;
     top: 0px;
-   
+    z-index: 100;
 }
 .airbnb-icon-div{
     align-items: center;
@@ -198,6 +199,7 @@ body{
     padding: 0px 24px;
     flex: 0 1 auto;
     min-width: 348px;
+    cursor: pointer;
 }
 .tab-searchbar{
     background-color: white;
@@ -316,12 +318,15 @@ body{
    height: 80px; 
    display: flex;
    padding: 2px 0px 0px 0px;
+   cursor: pointer;
 }
 .yourhome-main{
+    box-sizing: border-box;
     width: 148.34px;
     height: 42px;
     padding: 29px 0px 0px 12px;
 }
+
 .yourhome{
     width: 118.34px;
     height: 18px;
@@ -329,6 +334,7 @@ body{
     font-family: "airbnbmedium";
     font-size: 14px;
     justify-content: space-between;
+    /* margin: auto; */
 }
 .glob-main{
     width: 46px;
@@ -368,9 +374,7 @@ body{
 }
 .airbnb-texticon-div{
     padding: 6px 0px 0px 0px;
-}
-::-webkit-scrollbar-button{
-    display: none;
+    cursor: pointer;
 }
 .navigation-main-div{
     width: 100%;
@@ -382,7 +386,7 @@ body{
     display: flex;
     top: 70px;
     background: white;
-    
+    z-index: 80;
 }
 .all-navbar{
     width: 100%;
@@ -394,11 +398,13 @@ body{
     row-gap: 32px;
     justify-content: space-between;
     padding: 0px 0px 0px 0px;
-    overflow: scroll;
-
-
+    overflow-x: scroll;
+    cursor: pointer;
 }
-.nav-icon-main{
+.all-navbar::-webkit-scrollbar{
+    display: none;
+}
+.nav-item-main{
     width: 64px;
     height: 44px;
     display: flex;
@@ -409,17 +415,34 @@ body{
     opacity: 0.6;
     transition: opacity 0.2s ease-in-out;
 }
-.nav-icon-main:hover{
+.nav-item-main::after{
+    content: "";
+    left: 0px;
+    right: 0px;
+    background: #B0B0B0;
+    position: absolute;
+    bottom: 0px;
+}
+.nav-item-main:hover{
     opacity: 1;
-} 
+}
+.show-selection{
+    border-bottom: 4px solid black;
+}
+.selection-hovering-effect{
+    position: relative;
+}
+.selection-hovering-effect:hover .nav-item-main::after{
+   height:1px;
+}
 .nav-icon{
     width: 24px;
     height: 24px;
-    fill: #717171;
+    fill:black;
 }
 .nav-text{
     height: 16px;
-    color: #717171;
+    color:black;
     font-size: 12px;
     font-family: "airbnbmedium";
     line-height: 25px;
@@ -443,7 +466,6 @@ body{
     border-radius: 100%;
     border: 0.5px solid rgba(0,0,0,0.3);
     display: flex;
-   
 }
 .scroll-icon{
     width: 12px;
@@ -498,8 +520,10 @@ body{
     grid-auto-flow: column;
     column-gap: 24px;
     row-gap: 24px;
-    position: relative;
-    z-index: -1;
+    overflow-y: scroll;
+}
+.otherthan-nav::-webkit-scrollbar{
+    display: none;
 }
 .taxes-main{
     width: 100%;
@@ -508,8 +532,6 @@ body{
     border-radius: 12px;
     border: 1px solid #dddddd;
     grid-column: 2/3;
-
-
 }
 .taxes-main-div{
     display: flex;
@@ -529,7 +551,6 @@ body{
     height: 17px;
     margin-top: 13px;
     margin-bottom: auto;
-    
 }
 .movebutton-main{
     background-color:#B0B0B0;
@@ -589,10 +610,8 @@ body{
 }
 .grid-image{
     width: 100%;
-    height: 100%;
     background: transparent;
     border: none;
-    border-radius: 11px;
     aspect-ratio: 20/19;
 }
 .like-main{
@@ -610,11 +629,78 @@ body{
     width: 24px;
     height: 24px;
 }
+.carousels-container{
+    background: transparent;
+     position: absolute;
+     bottom: 10%;
+     left: 50%;
+     display: flex;
+     justify-content: space-between;
+}
+.carousels{
+    width: 5px;
+    height: 5px;
+    border-radius: 40px;
+    background: white;
+    margin-right: 6px;
+}
+.carousels-other{
+    width: 5px;
+    height: 5px;
+    border-radius: 40px;
+    background:#B0B0B0;
+    margin-right: 6px;
+}
 .grid-image-div{
     display: flex;
-    height: 100%;
-    width: 100%;
+    height: 310px;
+    width: 327px;
     position:relative;
+    overflow-x: hidden;
+    border-radius: 11px;
+}
+.slider{
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+.slider::-webkit-scrollbar{
+    display: none;
+}
+.slider-button-left-container{
+    width: 32px;
+    height: 32px;
+    border-radius: 40px;
+    background: white;
+    left: 10px;
+    top: 50%;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+}
+.slider-button-left{
+    margin: auto;
+    width: 12px;
+    height: 12px;
+}
+.slider-button-right-container{
+    width: 32px;
+    height: 32px;
+    border-radius: 40px;
+    background: white;
+    right: 10px;
+    top: 50%;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+}
+.slider-button-right{
+    margin: auto;
+    width: 12px;
+    height: 12px;
+}
+.grid-image-div::-webkit-scrollbar{
+    display: none;
 }
 .grid-text-div{
     display: grid;
@@ -628,6 +714,9 @@ body{
     color: #222222;
     font-size: 15px;
     font-family: "airbnbmedium";
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 .rupee-section{
     display: flex;
@@ -648,11 +737,10 @@ body{
 .rating-main{
     width: 46.23px;
     height: 19px;
-    grid-column: -2/-1;
-    grid-row: 1;
     justify-self: end;
     display: flex;
     line-height: 0px;
+    align-items: center;
 }
 .star{
     width: 12px;
@@ -675,9 +763,10 @@ body{
     background: transparent;
     display: flex;
     position: fixed;
-    top: 713px;
+    top: 725px;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 .map-main-div{
     width: 89.3px;
@@ -737,11 +826,9 @@ body{
     margin: 0px 0px 8px;
 }
 .footer-nav-main{
- padding-top: 16px;
- box-sizing: border-box;
- border-bottom: 1px solid #DDDDDD;
- 
- 
+   padding-top: 16px;
+   box-sizing: border-box;
+   border-bottom: 1px solid #DDDDDD;
 }
 .footer-nav{
     display: grid;
@@ -752,6 +839,9 @@ body{
     padding-top: 0px;
     overflow: scroll;
 }
+.footer-nav::-webkit-scrollbar{
+    display: none;
+}
 .footer-nav-item
 {
     margin: auto;
@@ -759,12 +849,22 @@ body{
     font-size: 14px;
     height: 40px;
 }
-
+.nav-notation{
+    box-sizing: border-box;
+    height: 40px;
+    position:relative;
+}
+.nav-indicator{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 38px;
+}
 .footer-grid-main{
     width: 100%;
     padding: 32px 0px 0px;
     display: grid;
-
 }
 .footer-grid{
     display: grid;
@@ -897,8 +997,9 @@ body{
 .twitter{
     margin-right: 16px;
 }
-
-
+.nav-notation-change{
+    color: #717171;
+}
 @media screen and (min-width:550px) {
     .main-grid{
         grid-template-columns: repeat(2,1fr);
@@ -910,9 +1011,10 @@ body{
         grid-column: 1/3;
     }
     .taxes{
-        margin-left: -6px;
-        margin-right: 6px;
+        margin-left: -12px;
+        margin-right: 12px;
     }
+ 
 }
 @media screen and (min-width:744px){
     .headerdiv{
@@ -925,7 +1027,6 @@ body{
         position: fixed;
         padding: 20px 40px 0px 40px;
         border-bottom: none;
-        
     }
     .tab-navigation-div{
         width: 100%;
@@ -970,9 +1071,8 @@ body{
     .map-div{
         display: none;
     }
-    
     .map-pseudo-div{
-        top: 693px;
+        top: 704px;
     }
     .footer-midsection{
         padding: 0px 40px;
@@ -1019,6 +1119,23 @@ body{
    .taxes-main{
     margin-left: 12px;
    }
+   .grid-image-div{
+    width: 332px;
+    height: 315.39px;
+   }
+   .grid-image{
+    width: 332px;
+    height:315.39px ;
+   }
+   .main-grid{
+    column-gap: 24px;
+   }
+   .footer-grid-main{
+    padding: 36px 0px;
+   }
+   .show-selection{
+    border-bottom: 2px solid black;
+   }  
 }
 @media screen and (max-width:744px){
     .tab-header-div{
@@ -1054,12 +1171,18 @@ body{
     }
     .taxes{
         display: flex;
-        margin-left: -12px;
-        margin-right: 12px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .bottom-section-sectionone{
         justify-content: normal;
         align-items: center;
+    }
+    .slider-button-left-container{
+        display: none;
+    }
+    .slider-button-right-container{
+        display: none;
     }
    
 }
@@ -1077,8 +1200,7 @@ body{
     }
     .footer-grid{
         grid-template-columns: repeat(3,1fr);
-    }
-    
+    }    
 }
 @media screen and (min-width:1024px){
     .tab-anywhere{
@@ -1131,18 +1253,39 @@ body{
     row-gap: 14px;
    }
    .footer-midsection-grid-item{
-    padding: 49px 0px 48px 0px;
+    padding: 48px 0px 48px 0px;
     width: 309.33px;
     height: 306.09px;
     border-bottom: none;
    }
-   .footer-midsection{
+   .footer-midsection-grid{
     border-bottom: 1px solid #dddddd;
    }
    .taxes{
     margin-left: -12px;
     margin-right: 12px;
-   }  
+   }
+   .grid-image-div{
+    width: 298px;
+    height: 283.72px;
+   }
+   .grid-image{
+    width: 298px;
+    height: 283.72px;
+   } 
+   .carousels-container{
+    top: 268px;
+   } 
+   .bottom-section-sectionone-main{
+    margin-bottom: 2px;
+   }
+   .footer-firstpart{
+    height: 429px;
+   }
+   .footer-grid-main{
+    padding: 25px 0px 0px;
+   }
+   
 }
 @media screen and (min-width:1126px){
     .airbnb-icon-div{
@@ -1165,9 +1308,7 @@ body{
     }
     .other-view-footer{
         display: none;
-    }
-    
-}
+    }}
 @media screen and (max-width:1126px){
     .airbnb-texticon-div{
         display: none;
@@ -1187,7 +1328,6 @@ body{
         display: none;
     }
 }
-
 @media screen and (min-width:1440px) {
     .footer-grid{
         grid-template-columns: repeat(6,1fr);
@@ -1211,14 +1351,14 @@ body{
         display: grid;
         grid-auto-flow: column;
         column-gap: 565px;
-        padding:20px 80px 20px 80px;
+        padding:24px 80px 24px 80px;
         align-items: center;
-        height: 67.9px;
+        height: 69.02px;
     }
     .bottom-section-sectiontwo{
         display: flex;
         width: 453.36px;
-        height: 28.02px;
+        height: 20.02px;
         margin-bottom: 0px;
     }
     .bottom-section-sectionone{
@@ -1239,6 +1379,10 @@ body{
         padding: 0px 80px;
     }
     .grid-image-div{
+        width: 302px;
+        height: 286.89px;
+    }
+    .grid-image{
         width: 302px;
         height: 286.89px;
     }
@@ -1272,14 +1416,222 @@ body{
         margin-right: 0px;
     }
     .footer-midsection-grid-item{
-        padding: 48px 0px 48px 0px;
+        padding: 49px 0px 48px 0px;
+    }
+    .footer-grid-main{
+        padding: 26px 0px 0px;
+    }
+    .footer-firstpart{
+        height: 369px;
+        padding: 48px 80px;
+    }
+    .map-pseudo-div{
+        top: 635px;
     }
 }
 @media screen and (min-width:1880px){
     .main-grid{
         grid-template-columns: repeat(6,1fr);
+        column-gap: 20px;
+        row-gap: 40px;
     }
     .taxes{
         grid-template-columns: repeat(6,1fr);
+        column-gap: 20px;
     }
+    .taxes-main-div{
+        width: 100%;
+        margin-left: 10px;
+    }
+    .taxes-main{
+        margin-left: 202px;
+        width: 556px;
+        grid-column: 3/4;
+    }
+    .grid-image-div{
+        width: 266.66px;
+        height: 253.31px;
+    }
+    .tab-header-div{
+        padding: 0px 80px 0px 80px;
+    }
+    .navigation-main-div{
+        width: 100%;
+        padding: 20px 80px 0px 80px;
+    }
+    .otherthan-nav{
+        width: 100%;
+        padding: 0px 80px;
+        margin: 195px 0px 48px;
+        
+    }
+    .grid-image{
+        width: 266.66px;
+        height: 253.31px;
+    }
+    
+    .otherthan-scroll{
+        right: 80px;
+    }
+    .map-pseudo-div{
+        top: 1036px;
+    }
+    .footer-firstpart{
+        padding: 47px 387px 48px 387px;
+    }
+    .footer-nav{
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: left;
+        align-items: center;
+        margin-top: 24px;
+    }
+    .other-footer-bottom-section{
+        display: grid;
+        grid-auto-flow: column;
+        /* column-gap: 560px; */
+        padding: 20px 388px 20px 388px;
+        column-gap: 417px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .heading-one{
+        margin-top: 0px;
+        margin-bottom: 27px;
+    }
+    .footer-nav-main{
+        padding: 0px;
+        margin: 0px;
+        height: 34px;
+    }
+    .bottom-section-sectionone-textone{
+        margin-left: -1px;
+    }
+    .footer-glob-icon{
+        margin-right: 8px;
+        margin-left: -1px;
+    }
+    .footer-midsection{
+        padding: 0px 387px;
+    }
+    .carousels-container{
+        top: 233px;
+        left: 108px;
+    }
+    .grid-text-div{
+        margin-top: 9px;
+        line-height: 23px;
+    }
+    .nav-item-main{
+        width: 100%;
+    }
+    .bottom-section-sectionone{
+        margin-bottom: 0px;
+    }
+    .footer-midsection-grid-item{
+        padding: 49px 0px 48px 0px;
+    }
+    .footer-midsection-grid-item-head{
+      margin-bottom: 14px;   
+    }
+    .yourhome-main:hover{
+        border-radius: 22px;
+        background:#F8F8F8;   
+        padding: 0px 0px 0px 0px;
+        align-items: center;
+        margin-top: 18px;
+        padding-top: 11px;
+        padding-left: 12px;
+     }
+    .yourhome:hover{
+         margin-top: 12px;
+         margin-top: 0px;
+
+    }
+    .yourhome{
+        padding-right: 0px;
+    }
+    .glob-main:hover{
+       width: 46px;
+       height:42px;
+       box-sizing: border-box;
+       border-radius: 22px;
+       background: #f8f8f8;
+       margin-top: 16px;
+       padding-top: 13px;
+       padding-bottom: 4px;
+       padding-left: 13px;
+       margin-left: -3px;
+       margin-right: 4px;
+    }
+    .glob-icon{
+        margin-bottom: 1px;
+    }
+    .dashboard{
+        margin-bottom: 1px;
+    }
+    .tab-searchbar{
+        width: 361.19px;
+    }
+    .dashboard-person-main:hover{
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2),
+        0 4px 10px rgba(0,0,0,0.1); 
+
+        
+    }
+    .footer-grid-main{
+        padding: 33px 0px 0px;
+    }
+    .heading-one{
+        margin-bottom: 25px;
+    }
+    .footer-nav{
+        height:34px;
+        margin-top: 10px;
+    }
+    .nav-notation{
+        height:34px;
+        border-bottom: 2px solid transparent;
+    }
+    .footer-nav-item{
+        height: 34px;
+    }
+    .nav-indicator{
+        top: 32px;
+    }
+    .footer-midsection-grid-item-head{
+      margin: 0px 0px 13px;
+    }
+    .bottom-section-sectiontwo{
+        margin-left: -1px;
+        align-items: center;
+        margin-top: 1px;
+    }
+    @media screen and (min-width:1920px) {
+        .taxes-main-div{
+            padding-left: 0px;
+        }
+   
+        .map-pseudo-div{
+            top:795px;
+        }
+
+      
+       
+    }
+    @media screen and (min-width:2560px) {
+        .otherthan-nav{
+            width: 2520px;
+            margin: 16px 0px 48px;
+            padding: 0px 80px;
+        }
+        .main-grid{
+            column-gap: 0px;
+        }
+
+    }
+  
+
+
 }
+
